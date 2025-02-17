@@ -15,7 +15,7 @@ def transcribe_audio(input_file, model_name):
 
     # 音声ファイルの文字起こし
     # generatorが返ってくるため、ここの処理自体は軽い
-    segments, info = model.transcribe(input_file)
+    segments, info = model.transcribe(input_file, language="ja", vad_filter=True)
 
     # 結果をファイルに書き出す
     base_name = os.path.splitext(input_file)[0]
@@ -43,8 +43,8 @@ if __name__ == "__main__":
     parser.add_argument("input_file", help="Path to the input audio file")
     parser.add_argument(
         "--model",
-        default="base",
-        help="Model size to use (e.g., tiny, base, small, medium, large, large-v2). Default is 'base'.",
+        default="turbo",
+        help="Model size to use (e.g., tiny, base, small, medium, large, large-v2, turbo). Default is 'base'.",
     )
 
     args = parser.parse_args()

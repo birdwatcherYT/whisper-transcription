@@ -44,8 +44,8 @@ if __name__ == "__main__":
     parser.add_argument("input_file", help="Path to the input audio file")
     parser.add_argument(
         "--model",
-        default="base",
-        help="Model size to use (e.g., tiny, base, small, medium, large). Default is 'base'.",
+        default="turbo",
+        help="Model size to use (e.g., tiny, base, small, medium, large, turbo). Default is 'base'.",
     )
 
     args = parser.parse_args()

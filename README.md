@@ -12,7 +12,7 @@ pip install faster-whisper
 
 実行
 ```sh
-python run-fast.py input_audio.wav [--model small]
+python run-fast.py input_audio.wav [--model turbo]
 ```
 
 ## `run.py`: whisper
@@ -20,11 +20,11 @@ python run-fast.py input_audio.wav [--model small]
 
 環境構築
 ```sh
-pip install git+https://github.com/openai/whisper.git
+pip install openai-whisper
 pip install ffmpeg-python
 ```
 
 実行
 ```sh
-python run.py input_audio.wav [--model small]
+python run.py input_audio.wav [--model turbo]
 ```
