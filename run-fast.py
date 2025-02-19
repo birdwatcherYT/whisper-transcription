@@ -44,7 +44,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model",
         default="turbo",
-        help="Model size to use (e.g., tiny, base, small, medium, large, large-v2, turbo). Default is 'base'.",
+        help="Model size to use (e.g., tiny, base, small, medium, large, large-v2, turbo). Default is 'turbo'.",
     )
 
     args = parser.parse_args()
